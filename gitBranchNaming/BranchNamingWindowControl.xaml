@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="gitBranchNaming.BranchNamingWindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             Background="{DynamicResource VsBrush.Window}"
+             Foreground="{DynamicResource VsBrush.WindowText}"
+             mc:Ignorable="d" d:DesignWidth="450"
+             Name="MyToolWindow" Width="550" Height="200.247">
+    <Grid Margin="0,-5,0,10" Width="550">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txbTaskTitle" HorizontalAlignment="Left" Height="23" Margin="0,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="453"/>
+        <Button x:Name="button" Content="Get Name" HorizontalAlignment="Left" Margin="458,91,0,0" VerticalAlignment="Top" Width="92" Height="23" Click="button_Click"/>
+        <TextBox x:Name="txbBranchTitle" HorizontalAlignment="Left" Height="23" Margin="0,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="550" Grid.RowSpan="2"/>
+        <Label x:Name="label" Content="Jira task title (Sample: Description (TASKID-9999))" HorizontalAlignment="Left" Margin="0,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,-0.472"/>
+        <Label x:Name="lblSymbolsCount" Content="" HorizontalAlignment="Left" Margin="304,65,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cmbxBranches" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top" Width="297" Loaded="cmbxBranches_Loaded"/>
+        <Label x:Name="label_Copy" Content="Branches" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,-0.472"/>
+        <RadioButton x:Name="cbBug" Content="Bug" HorizontalAlignment="Left" Margin="348,35,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="cbFeature" Content="Feature" HorizontalAlignment="Left" Margin="393,35,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="cbFeatureFrom" Content="Feature From" HorizontalAlignment="Left" Margin="457,35,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="cbTask" Content="Task" HorizontalAlignment="Left" Margin="302,35,0,0" VerticalAlignment="Top" IsChecked="True"/>
+    </Grid>
+</UserControl>
